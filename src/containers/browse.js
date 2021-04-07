@@ -1,6 +1,6 @@
 import React from 'react';
-import { Browse } from '../components';
+import { SelectProfileContainer } from './profiles';
 
-export function BrowseContainer({ children }) {
-  return <Browse>{children}</Browse>;
+export function BrowseContainer({ slides }) {
+  return <SelectProfileContainer />;
 }
