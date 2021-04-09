@@ -206,3 +206,238 @@ exports[`<Car /> renders the <Card /> with populated data 1`] = `
   </div>
 </div>
 `;
+
+exports[`<Card /> renders the <Card /> and toggles the card feature. 1`] = `
+<div
+  class="card__Group-sc-1tn30zk-2 hFmXEe"
+>
+  <div
+    class="card__Container-sc-1tn30zk-1 gOgbnt"
+  >
+    <p
+      class="card__Title-sc-1tn30zk-0 bRbdZg"
+    >
+      Documentaries
+    </p>
+    <div
+      class="card__Entities-sc-1tn30zk-5 iRHnBv"
+    >
+      <div
+        class="card__Item-sc-1tn30zk-8 ewxWbU"
+        data-testid="tiger-king-item-feature"
+      >
+        <img
+          class="card__Image-sc-1tn30zk-7 bRfifD"
+          src="/images/series/documentaries/tiger-king/small.jpg"
+        />
+        <div
+          class="card__Meta-sc-1tn30zk-6 iUPnT"
+        >
+          <p
+            class="card__SubTitle-sc-1tn30zk-3 cFWzow"
+          >
+            Tiger King
+          </p>
+          <p
+            class="card__Text-sc-1tn30zk-4 itdKHh"
+          >
+            Tiger King description
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="card__Container-sc-1tn30zk-1 gOgbnt"
+  >
+    <p
+      class="card__Title-sc-1tn30zk-0 bRbdZg"
+    >
+      Feel Good
+    </p>
+    <div
+      class="card__Entities-sc-1tn30zk-5 iRHnBv"
+    >
+      <div
+        class="card__Item-sc-1tn30zk-8 ewxWbU"
+        data-testid="juno-item-feature"
+      >
+        <img
+          class="card__Image-sc-1tn30zk-7 bRfifD"
+          src="/images/series/feel-good/juno/small.jpg"
+        />
+        <div
+          class="card__Meta-sc-1tn30zk-6 iUPnT"
+        >
+          <p
+            class="card__SubTitle-sc-1tn30zk-3 cFWzow"
+          >
+            Juno
+          </p>
+          <p
+            class="card__Text-sc-1tn30zk-4 itdKHh"
+          >
+            Juno description
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Card /> renders the <Card /> with and clicks the card feature 1`] = `
+<div
+  class="card__Group-sc-1tn30zk-2 hFmXEe"
+>
+  <div
+    class="card__Container-sc-1tn30zk-1 gOgbnt"
+  >
+    <p
+      class="card__Title-sc-1tn30zk-0 bRbdZg"
+    >
+      Documentaries
+    </p>
+    <div
+      class="card__Entities-sc-1tn30zk-5 iRHnBv"
+    >
+      <div
+        class="card__Item-sc-1tn30zk-8 ewxWbU"
+        data-testid="tiger-king-item-feature"
+      >
+        <img
+          class="card__Image-sc-1tn30zk-7 bRfifD"
+          src="/images/series/documentaries/tiger-king/small.jpg"
+        />
+        <div
+          class="card__Meta-sc-1tn30zk-6 iUPnT"
+        >
+          <p
+            class="card__SubTitle-sc-1tn30zk-3 cFWzow"
+          >
+            Tiger King
+          </p>
+          <p
+            class="card__Text-sc-1tn30zk-4 itdKHh"
+          >
+            Tiger King description
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="card__Container-sc-1tn30zk-1 gOgbnt"
+  >
+    <p
+      class="card__Title-sc-1tn30zk-0 bRbdZg"
+    >
+      Feel Good
+    </p>
+    <div
+      class="card__Entities-sc-1tn30zk-5 iRHnBv"
+    >
+      <div
+        class="card__Item-sc-1tn30zk-8 ewxWbU"
+        data-testid="juno-item-feature"
+      >
+        <img
+          class="card__Image-sc-1tn30zk-7 bRfifD"
+          src="/images/series/feel-good/juno/small.jpg"
+        />
+        <div
+          class="card__Meta-sc-1tn30zk-6 iUPnT"
+        >
+          <p
+            class="card__SubTitle-sc-1tn30zk-3 cFWzow"
+          >
+            Juno
+          </p>
+          <p
+            class="card__Text-sc-1tn30zk-4 itdKHh"
+          >
+            Juno description
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Card /> renders the <Card /> with populated data 1`] = `
+<div
+  class="card__Group-sc-1tn30zk-2 hFmXEe"
+>
+  <div
+    class="card__Container-sc-1tn30zk-1 gOgbnt"
+  >
+    <p
+      class="card__Title-sc-1tn30zk-0 bRbdZg"
+    >
+      Documentaries
+    </p>
+    <div
+      class="card__Entities-sc-1tn30zk-5 iRHnBv"
+    >
+      <div
+        class="card__Item-sc-1tn30zk-8 ewxWbU"
+      >
+        <img
+          class="card__Image-sc-1tn30zk-7 bRfifD"
+          src="/images/series/documentaries/tiger-king/small.jpg"
+        />
+        <div
+          class="card__Meta-sc-1tn30zk-6 iUPnT"
+        >
+          <p
+            class="card__SubTitle-sc-1tn30zk-3 cFWzow"
+          >
+            Tiger King
+          </p>
+          <p
+            class="card__Text-sc-1tn30zk-4 itdKHh"
+          >
+            Tiger King description
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="card__Container-sc-1tn30zk-1 gOgbnt"
+  >
+    <p
+      class="card__Title-sc-1tn30zk-0 bRbdZg"
+    >
+      Feel Good
+    </p>
+    <div
+      class="card__Entities-sc-1tn30zk-5 iRHnBv"
+    >
+      <div
+        class="card__Item-sc-1tn30zk-8 ewxWbU"
+      >
+        <img
+          class="card__Image-sc-1tn30zk-7 bRfifD"
+          src="/images/series/feel-good/juno/small.jpg"
+        />
+        <div
+          class="card__Meta-sc-1tn30zk-6 iUPnT"
+        >
+          <p
+            class="card__SubTitle-sc-1tn30zk-3 cFWzow"
+          >
+            Juno
+          </p>
+          <p
+            class="card__Text-sc-1tn30zk-4 itdKHh"
+          >
+            Juno description
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

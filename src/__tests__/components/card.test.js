@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, getByAltText } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import { Card, Player } from '../../components';
 
 const category = 'series';
@@ -35,7 +35,7 @@ const slideRows = [
   },
 ];
 
-describe('<Car />', () => {
+describe('<Card />', () => {
   it('renders the <Card /> with populated data', () => {
     const { container, getByText } = render(
       <Card.Group>
@@ -102,7 +102,7 @@ describe('<Car />', () => {
             <Card.Feature category={category}>
               <Player>
                 <Player.Button />
-                <Player.Video src="/videos/bunny.mp4" />
+                <Player.Video />
               </Player>
             </Card.Feature>
           </Card>
@@ -120,6 +120,9 @@ describe('<Car />', () => {
     expect(queryByText('PG')).toBeFalsy();
     fireEvent.click(getByTestId('juno-item-feature'));
     expect(queryByText('PG')).toBeTruthy();
+
+    fireEvent.click(getByAltText('Close'));
+    expect(queryByText('PG')).toBeFalsy();
     expect(container.firstChild).toMatchSnapshot();
   });
 });
