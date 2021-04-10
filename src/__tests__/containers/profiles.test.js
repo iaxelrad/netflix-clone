@@ -6,7 +6,7 @@ jest.mock('react-router-dom');
 
 describe('<Profiles />', () => {
   it('renders the <Profiles />', () => {
-    const user = { displayName: 'Test', photoURL: 'profile.png' };
+    const user = { displayName: 'Itamar', photoURL: 'profile.png' };
     const setProfile = jest.fn();
     const { getByTestId } = render(
       <SelectProfileContainer user={user} setProfile={setProfile} />
