@@ -22,7 +22,7 @@ import {
 
 export default function Header({ bg = true, children, ...restProps }) {
   return bg ? (
-    <Background {...restProps} data-testid="header-bg">
+    <Background data-testid="header-bg" {...restProps}>
       {children}
     </Background>
   ) : (
@@ -31,10 +31,10 @@ export default function Header({ bg = true, children, ...restProps }) {
 }
 
 Header.Feature = function HeaderFeature({ children, ...restProps }) {
-  return <Feature {...restProps}>{children}</Feature>;
+  return <Feature>{children}</Feature>;
 };
 
-Header.FeatureCallOut = function HeaderFeatureCallout({
+Header.FeatureCallOut = function HeaderFeatureCallOut({
   children,
   ...restProps
 }) {
@@ -49,7 +49,7 @@ Header.Dropdown = function HeaderDropdown({ children, ...restProps }) {
   return <Dropdown {...restProps}>{children}</Dropdown>;
 };
 
-Header.PlayButton = function headerPlayButton({ children, ...restProps }) {
+Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
   return <PlayButton {...restProps}>{children}</PlayButton>;
 };
 

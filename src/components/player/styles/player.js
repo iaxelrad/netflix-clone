@@ -11,7 +11,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.75);
   margin: 0 20px;
 `;
 
@@ -66,13 +66,14 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   background-color: #e50914;
-  border-color: #ff0a10;
-  width: 114px;
+  border-color: #ff0a16;
+  width: 115px;
   height: 45px;
   text-transform: uppercase;
   font-weight: bold;
   color: white;
   font-size: 18px;
+  height: 45px;
   cursor: pointer;
   padding-left: 0;
 

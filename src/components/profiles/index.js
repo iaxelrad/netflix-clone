@@ -5,15 +5,15 @@ export default function Profiles({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
 
-Profiles.Title = function ProfileTitle({ children, ...restProps }) {
+Profiles.Title = function ProfilesTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
 };
 
-Profiles.List = function ProfileList({ children, ...restProps }) {
+Profiles.List = function ProfilesList({ children, ...restProps }) {
   return <List {...restProps}>{children}</List>;
 };
 
-Profiles.User = function ProfileUser({ children, ...restProps }) {
+Profiles.User = function ProfilesUser({ children, ...restProps }) {
   return <Item {...restProps}>{children}</Item>;
 };
 
@@ -26,6 +26,6 @@ Profiles.Picture = function ProfilesPicture({ src, ...restProps }) {
   );
 };
 
-Profiles.Name = function ProfileName({ children, ...restProps }) {
+Profiles.Name = function ProfilesName({ children, ...restProps }) {
   return <Name {...restProps}>{children}</Name>;
 };

@@ -16,23 +16,24 @@ export default function SignUp() {
 
   const isInvalid = firstName === '' || password === '' || emailAddress === '';
 
-  const handleSignUp = event => {
+  const handleSignup = event => {
     event.preventDefault();
 
-    //firebase work here
-    firebase
+    return firebase
       .auth()
       .createUserWithEmailAndPassword(emailAddress, password)
-      .then(result => {
-        result.user.updateProfile({
-          displayName: firstName,
-          photoURL: Math.floor(Math.random() * 5) + 1,
-        });
-      })
-      .then(() => {
-        history.push(ROUTES.BROWSE);
-      })
+      .then(result =>
+        result.user
+          .updateProfile({
+            displayName: firstName,
+            photoURL: Math.floor(Math.random() * 5) + 1,
+          })
+          .then(() => {
+            history.push(ROUTES.BROWSE);
+          })
+      )
       .catch(err => {
+        setFirstName('');
         setEmailAddress('');
         setPassword('');
         setError(err.message);
@@ -44,8 +45,9 @@ export default function SignUp() {
       <HeaderContainer>
         <Form>
           <Form.Title>Sign Up</Form.Title>
-          {error && <Form.Error data-testid="error">{error}</Form.Error>}
-          <Form.Base onSubmit={handleSignUp} method="POST">
+          {error && <Form.Error>{error}</Form.Error>}
+
+          <Form.Base onSubmit={handleSignup} method="POST">
             <Form.Input
               placeholder="First name"
               value={firstName}
@@ -58,25 +60,25 @@ export default function SignUp() {
             />
             <Form.Input
               type="password"
+              value={password}
               autoComplete="off"
               placeholder="Password"
-              value={password}
               onChange={({ target }) => setPassword(target.value)}
             />
             <Form.Submit
-              data-testid="sign-up"
               disabled={isInvalid}
               type="submit"
+              data-testid="sign-up"
             >
               Sign Up
             </Form.Submit>
           </Form.Base>
+
           <Form.Text>
-            Already a user?{' '}
-            <Form.Link to={ROUTES.SIGN_IN}>Sign in now</Form.Link>
+            Already a user? <Form.Link to="/signin">Sign in now.</Form.Link>
           </Form.Text>
           <Form.TextSmall>
-            This page is protected by Google reCaptcha to ensure you're not a
+            This page is protected by Google reCAPTCHA to ensure you're not a
             bot. Learn more.
           </Form.TextSmall>
         </Form>

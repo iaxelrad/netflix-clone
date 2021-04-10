@@ -7,11 +7,10 @@ export const Container = styled.div`
   min-height: 660px;
   background-color: rgba(0, 0, 0, 0.75);
   border-radius: 5px;
-  box-sizing: border-box;
   width: 100%;
   margin: auto;
   max-width: 450px;
-  padding: 60px 48px 40px;
+  padding: 60px 68px 40px;
   margin-bottom: 100px;
 `;
 
@@ -32,7 +31,7 @@ export const Error = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: white;
+  color: #fff;
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 28px;
@@ -52,10 +51,10 @@ export const TextSmall = styled.p`
 `;
 
 export const Link = styled(ReactRouterLink)`
-  color: white;
+  color: #fff;
   text-decoration: none;
 
-  &: hover {
+  &:hover {
     text-decoration: underline;
   }
 `;
@@ -64,7 +63,7 @@ export const Input = styled.input`
   background: #333;
   border-radius: 4px;
   border: 0;
-  color: white;
+  color: #fff;
   height: 50px;
   line-height: 50px;
   padding: 5px 20px;

@@ -20,7 +20,7 @@ export function SelectProfileContainer({ user, setProfile }) {
             onClick={() =>
               setProfile({
                 displayName: user.displayName,
-                profileURL: user.photoURL,
+                photoURL: user.photoURL,
               })
             }
           >

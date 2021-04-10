@@ -1,7 +1,7 @@
-import styled, { createGlobalStyle } from 'styled-components/macro';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const LockBody = createGlobalStyle`
-  body: {
+  body {
     overflow: hidden;
   }
 `;
@@ -18,12 +18,13 @@ export const Spinner = styled.div`
   height: 100%;
   background-color: black;
   z-index: 999;
+
   :after {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    background-image: url(images/misc/spinner.png);
+    background-image: url(/images/misc/spinner.png);
     background-size: contain;
     background-repeat: no-repeat;
     margin-top: -150px;

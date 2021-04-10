@@ -4,13 +4,19 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 export const Background = styled.div`
   display: flex;
   flex-direction: column;
-  background: url(${({ src }) =>
-    src ? `../images/misc/${src}.jpg` : `../images/misc/home-bg.jpg`});
-  top-left / cover no-repeat;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(${({ src }) =>
+        src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg'})
+      top left / cover no-repeat;
 
   @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) =>
-      dontShowOnSmallViewPort && 'background: none'}
+      dontShowOnSmallViewPort && `background: none;`}
   }
 `;
 
@@ -22,8 +28,7 @@ export const Group = styled.div`
 export const Container = styled.div`
   display: flex;
   margin: 0 56px;
-  height: 64px;
-  padding: 18px 0;
+  height: 100px;
   justify-content: space-between;
   align-items: center;
 
@@ -37,10 +42,10 @@ export const Container = styled.div`
 `;
 
 export const Link = styled.p`
-  color: white;
+  color: #fff;
   text-decoration: none;
   margin-right: 30px;
-  font-weight: ${({ active }) => (active ? '700' : 'normal')};
+  font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
   cursor: pointer;
 
   &:hover {
@@ -67,8 +72,38 @@ export const Dropdown = styled.div`
   position: absolute;
   padding: 10px;
   width: 100px;
-  top 32px;
+  top: 32px;
   right: 10px;
+
+  ${Group}:last-of-type ${Link} {
+    cursor: pointer;
+  }
+
+  ${Group} {
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    ${Link} {
+      cursor: pointer;
+    }
+
+    ${Picture} {
+      cursor: default;
+    }
+  }
+
+  button {
+    margin-right: 10px;
+  }
+
+  p {
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 `;
 
 export const Search = styled.div`
@@ -80,8 +115,25 @@ export const Search = styled.div`
     cursor: pointer;
   }
 
-  @media (max-width: 700) {
+  @media (max-width: 700px) {
     display: none;
+  }
+`;
+export const SearchInput = styled.input`
+  background-color: rgba(64, 64, 64, 0.5);
+  color: white;
+  border: 1px solid white;
+  transition: width 0.5s;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-left: ${({ active }) => (active === true ? '10px' : '0')};
+  padding: ${({ active }) => (active === true ? '0 10px' : '0')};
+  opacity: ${({ active }) => (active === true ? '1' : '0')};
+  width: ${({ active }) => (active === true ? '200px' : '0px')};
+
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.8);
   }
 `;
 
@@ -89,6 +141,13 @@ export const SearchIcon = styled.button`
   cursor: pointer;
   background-color: transparent;
   border: 0;
+  outline: 0;
+  height: 32px;
+  width: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
     filter: brightness(0) invert(1);
@@ -97,7 +156,7 @@ export const SearchIcon = styled.button`
 `;
 
 export const PlayButton = styled.button`
-  box-shadow 0 0.6vw -0.4vw rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);
   background-color: #e6e6e6;
   color: #000;
   border-width: 0;
@@ -106,26 +165,13 @@ export const PlayButton = styled.button`
   max-width: 130px;
   font-size: 20px;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 10px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.5s ease;
   &:hover {
     background-color: #ff1e1e;
     color: white;
   }
-`;
-
-export const SearchInput = styled.input`
-  background-color: #44444459;
-  color: white;
-  border: 1px solid white;
-  transition: width 0.5s;
-  height: 30px;
-  font-size: 14px;
-  margin-left: ${({ active }) => (active ? '10px' : '0')};
-  padding: ${({ active }) => (active ? '0 10px' : '0')};
-  opacity: ${({ active }) => (active ? '1' : '0')};
-  width: ${({ active }) => (active ? '200px' : '0px')};
 `;
 
 export const Profile = styled.div`
@@ -153,7 +199,11 @@ export const Profile = styled.div`
     &:last-of-type {
       margin-bottom: 0;
     }
-    ${Link}, ${Picture} {
+    ${Link} {
+      cursor: pointer;
+    }
+
+    ${Picture} {
       cursor: default;
     }
   }
@@ -170,8 +220,8 @@ export const Profile = styled.div`
 `;
 
 export const Logo = styled.img`
-  height: 32px;
-  width: 108px;
+  height: 36px;
+  width: 134px;
   margin-right: 40px;
 
   @media (min-width: 1449px) {
@@ -212,17 +262,16 @@ export const Feature = styled(Container)`
 
 export const Text = styled.p`
   color: white;
-  font-size: normal;
+  font-size: 22px;
   line-height: normal;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
-  margin: 0;
 `;
 
 export const FeatureCallOut = styled.h2`
   color: white;
   font-size: 50px;
-  line-height: bold;
+  line-height: normal;
+  font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
   margin: 0;
-  margin-bottom: 20px;
 `;

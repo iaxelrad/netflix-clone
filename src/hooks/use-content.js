@@ -8,12 +8,12 @@ export default function useContent(target) {
   useEffect(() => {
     firebase
       .firestore()
-      .collection(target) // target will be either films/series
+      .collection(target)
       .get()
       .then(snapshot => {
         const allContent = snapshot.docs.map(contentObj => ({
           ...contentObj.data(),
-          codId: contentObj.id,
+          docId: contentObj.id,
         }));
 
         setContent(allContent);
